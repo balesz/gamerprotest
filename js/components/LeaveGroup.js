@@ -13,7 +13,7 @@ class LeaveGroup extends React.Component {
 
     async componentWillMount() {
         await Font.loadAsync({
-            'dpcl': require('../fonts/DPCL.otf'),
+            'dpcl': require('../../fonts/DPCL.otf'),
             });
             this.setState({ fontLoaded: true });
     }

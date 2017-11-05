@@ -27,10 +27,5 @@
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6"
-  },
-  "rnpm": {
-    "assets": [
-      "./js/fonts/"
-    ]
   }
 }
