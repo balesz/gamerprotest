@@ -10,47 +10,47 @@ const store = createStore(
       admins: [        
         {
           name: "GP admin",
-          icon: require('../img/drawable-hdpi/avatar_copy.png'), 
+          icon: require('../../img/drawable-hdpi/avatar_copy.png'), 
           hasChallenge: false
         },
         {
           name: "username",
-          icon: require('../img/drawable-hdpi/gamer_avatar_copy_12_copy.png'),
+          icon: require('../../img/drawable-hdpi/gamer_avatar_copy_12_copy.png'),
           hasChallenge: true
         }
       ],
       game: "FIFA 18",
-      imageSource: require('../img/drawable-hdpi/ast_layer_3_copy_3.png'),
+      imageSource: require('../../img/drawable-hdpi/ast_layer_3_copy_3.png'),
       memberCount: 48,
       members: [
           {
             name: "username",
-            icon: require('../img/drawable-hdpi/gamer_avatar_copy_17.png'),
+            icon: require('../../img/drawable-hdpi/gamer_avatar_copy_17.png'),
             hasChallenge: false
           },
           {
             name: "username",
-            icon: require('../img/drawable-hdpi/gamer_avatar_copy_16.png'),
+            icon: require('../../img/drawable-hdpi/gamer_avatar_copy_16.png'),
             hasChallenge: true
           },
           {
             name: "username",
-              icon: require('../img/drawable-hdpi/gamer_avatar_copy_14.png'),
+              icon: require('../../img/drawable-hdpi/gamer_avatar_copy_14.png'),
               hasChallenge: false
           },
           {
             name: "username",
-            icon: require('../img/drawable-hdpi/gamer_avatar_copy_12_copy.png'),
+            icon: require('../../img/drawable-hdpi/gamer_avatar_copy_12_copy.png'),
             hasChallenge: true
           },
           {
             name: "username",
-            icon: require('../img/drawable-hdpi/gamer_avatar_copy_18.png'),
+            icon: require('../../img/drawable-hdpi/gamer_avatar_copy_18.png'),
             hasChallenge: false
           },
           {
             name: "username",
-            icon: require('../img/drawable-hdpi/gamer_avatar_copy_18.png'),
+            icon: require('../../img/drawable-hdpi/gamer_avatar_copy_18.png'),
             hasChallenge: false
           }
       ],

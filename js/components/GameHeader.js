@@ -18,9 +18,9 @@ class GameHeader extends React.Component {
     }
     renderPlatformIcon(){
         if (this.props.platform == 'ps4'){
-            return <Image source={require('../img/drawable-hdpi/ps_icon.png')} style={styles.gameIconPS}/>
+            return <Image source={require('../../img/drawable-hdpi/ps_icon.png')} style={styles.gameIconPS}/>
         }else if (this.props.platform == 'xboxone'){
-            return <Image source={require('../img/drawable-hdpi/x1_icon.png')} style={styles.gameIconX1}/>
+            return <Image source={require('../../img/drawable-hdpi/x1_icon.png')} style={styles.gameIconX1}/>
         }
     }
 
@@ -44,7 +44,7 @@ class GameHeader extends React.Component {
                             <TouchableOpacity onPress={()=>{this.props.ActionProps.invite();
                                                             this.invite()}}>
                                 <View style={styles.inviteContainer}>
-                                    <Image source={require('../img/drawable-hdpi/share_icon.png')} style={styles.inviteIcon}/>
+                                    <Image source={require('../../img/drawable-hdpi/share_icon.png')} style={styles.inviteIcon}/>
                                     <Text style={styles.inviteText}>Invite to game with link</Text>
                                 </View>    
                             </TouchableOpacity>      

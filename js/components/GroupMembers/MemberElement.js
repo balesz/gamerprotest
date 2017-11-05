@@ -22,7 +22,7 @@ class MemberElement extends React.Component {
   renderChallengeIcon(){
     if(this.props.hasChallenge){
       return (
-        <Image style={styles.hasChallangeIcon}source={require(`../../img/drawable-hdpi/vector_smart_object1_copy_4.png`)} />
+        <Image style={styles.hasChallangeIcon}source={require(`../../../img/drawable-hdpi/vector_smart_object1_copy_4.png`)} />
       )
     }
   }
@@ -58,17 +58,20 @@ class MemberElement extends React.Component {
   render(){
     if(this.state.fontLoaded){
       return (
-        <TouchableOpacity onPress={()=>{this.clickOnMember(this.props.name);
-                                        this.props.ActionProps.clickOnMember(this.props.name)}}>
-          <View style={styles.container}>
-              <View >   
-                  <Image style={styles.icon}source={this.props.icon} />
-                  <View style={styles.iconHelper}></View>
-                  {this.renderChallengeIcon()}
-              </View>
-              <Text style={this.renderChallengeText()}>{this.props.name}</Text>
-          </View>    
-        </TouchableOpacity>  
+        <View style={styles.container}>
+          <TouchableOpacity onPress={()=>{this.clickOnMember(this.props.name);
+            this.props.ActionProps.clickOnMember(this.props.name)}}>
+            <View>   
+              <Image style={styles.icon}source={this.props.icon} />
+              <View style={styles.iconHelper}></View>
+              {this.renderChallengeIcon()}
+            </View>
+          </TouchableOpacity> 
+          <TouchableOpacity onPress={()=>{this.clickOnMember(this.props.name);
+            this.props.ActionProps.clickOnMember(this.props.name)}}> 
+            <Text style={this.renderChallengeText()}>{this.props.name}</Text>
+          </TouchableOpacity>    
+        </View>    
       )
     }else return <View></View>
   }

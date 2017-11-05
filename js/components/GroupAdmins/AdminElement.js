@@ -22,7 +22,7 @@ class AdminElement extends React.Component {
   renderChallengeIcon(){
     if(this.props.hasChallenge){
       return (
-        <Image style={styles.challengeIcon} source={require('../../img/drawable-hdpi/vector_smart_object1_copy_4.png')} />
+        <Image style={styles.challengeIcon} source={require('../../../img/drawable-hdpi/vector_smart_object1_copy_4.png')} />
       )
     }
   }
@@ -59,18 +59,20 @@ class AdminElement extends React.Component {
   render(){
     if(this.state.fontLoaded){
       return (
-        <TouchableOpacity onPress={()=>{this.clickOnAdmin(this.props.name);
-          this.props.ActionProps.clickOnAdmin(this.props.name)}}>
-          <View style={styles.container}>
-            
-              <View >   
-                  <Image style={styles.icon}source={this.props.icon} />
-                  <View style={styles.iconHelper}></View>
-                  {this.renderChallengeIcon()}
-              </View>
-              <Text style={this.renderChallengeTextStyle()}>{this.props.name}</Text>
-          </View>    
-        </TouchableOpacity>  
+        <View style={styles.container}>
+          <TouchableOpacity onPress={()=>{this.clickOnAdmin(this.props.name);
+            this.props.ActionProps.clickOnAdmin(this.props.name)}}>
+            <View>   
+              <Image style={styles.icon}source={this.props.icon} />
+              <View style={styles.iconHelper}></View>
+              {this.renderChallengeIcon()}
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={()=>{this.clickOnAdmin(this.props.name);
+            this.props.ActionProps.clickOnAdmin(this.props.name)}}>  
+            <Text style={this.renderChallengeTextStyle()}>{this.props.name}</Text>
+          </TouchableOpacity>    
+        </View>    
       )
     }else return <View></View>
   }

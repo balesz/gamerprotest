@@ -52,22 +52,25 @@ class GroupMembers extends React.Component {
     if(this.state.fontLoaded){
       return (
           <View style={styles.container}> 
-                <Text style={styles.header}>Group members</Text>
-                <TouchableOpacity onPress={()=>this.addMember()}>          
-                    <View style={styles.addGamerContainer}>
-                        <Image style={styles.addGamerIcon}source={require('../../img/drawable-hdpi/rectangle_2_copy.png')} />
-                        <Text style={styles.addGamerText}>add gamer</Text>
-                    </View>
-                </TouchableOpacity>  
-                {this.renderMembers()}
-                <TouchableOpacity onPress={()=>this.showAllMember()}>          
-                    <View style={styles.addGamerContainer}>
-                        <Text style={styles.showAllText}>show all</Text>
-                    </View>
-                </TouchableOpacity>  
+            <Text style={styles.header}>Group members</Text>     
+            <View style={styles.addGamerContainer}>
+              <TouchableOpacity onPress={()=>this.addMember()}>     
+                <Image style={styles.addGamerIcon}source={require('../../../img/drawable-hdpi/rectangle_2_copy.png')} />
+              </TouchableOpacity>
+              <TouchableOpacity onPress={()=>this.addMember()}>       
+                <Text style={styles.addGamerText}>add gamer</Text>
+              </TouchableOpacity>  
+            </View>
+            {this.renderMembers()}
+            <View style={styles.addGamerContainer}>
+              <TouchableOpacity onPress={()=>this.showAllMember()}>        
+                <Text style={styles.showAllText}>show all</Text>
+              </TouchableOpacity>  
+            </View>
           </View>    
+
       );
-    }else return <View></View>
+    }else return <View></View> 
    }
 }
 function mapDispatchToProps(dispatch) {
