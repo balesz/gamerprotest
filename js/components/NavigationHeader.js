@@ -32,7 +32,7 @@ class NavigationHeader extends React.Component {
             return (
                 <View style={styles.container}>
                     <TouchableOpacity onPress={()=>{this.props.ActionProps.goBack();
-                                                    this.goBack()    }}>
+                       this.goBack()}}>
                         <Image source={require('../../img/drawable-hdpi/back_icon.png')} style={styles.backImage}/>
                     </TouchableOpacity>     
                     <Text style={styles.text}>Info</Text>    

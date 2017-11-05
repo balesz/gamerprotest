@@ -29,9 +29,9 @@ class LeaveGroup extends React.Component {
     render() {
         if(this.state.fontLoaded){
             return (
-                <View>
+                <View style={styles.container}>
                     <TouchableOpacity onPress={()=>{this.leaveGroup();
-                                                    this.props.ActionProps.leaveGroup()}}>
+                     this.props.ActionProps.leaveGroup()}}>
                         <Text style={styles.text}>Leave group</Text>
                     </TouchableOpacity>    
                 </View>    
@@ -41,15 +41,18 @@ class LeaveGroup extends React.Component {
 }    
 
 const styles = StyleSheet.create({
-    text: {
-        color: '#f44336',
-        fontFamily: 'dpcl',
+    container: {
         marginTop: 20,
         marginBottom: 20,
         marginLeft: '7.5%',
+        width: 70
+    },
+    text: {
+        color: '#f44336',
+        fontFamily: 'dpcl',
         fontSize: 20
     }
-  });
+  });  
  
 
 function mapDispatchToProps(dispatch) {
